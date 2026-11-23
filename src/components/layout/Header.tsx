@@ -159,10 +159,10 @@ export default function Header() {
       <div className={`text-xs border-b transition-colors duration-300 ${overlay ? "text-white border-white/15" : "bg-[#326206] text-white border-transparent"}`}>
         <div className="max-w-7xl mx-auto px-4 py-1.5 flex justify-between items-center gap-3">
           <div className="flex gap-3 items-center min-w-0">
-            {/* PenCom logo + name (the coat of arms was replaced at the review) */}
+            {/* Coat of arms + Federal Republic of Nigeria (top bar only; the footer says National Pension Commission) */}
             <span className="hidden sm:flex items-center gap-1.5">
-              <span className="w-5 h-5 rounded-full bg-white flex items-center justify-center shrink-0" aria-hidden="true"><img src="./pencom-logo-sm.png" alt="" className="h-3.5" /></span>
-              <span className="opacity-90">National Pension Commission</span>
+              <img src="./coat-of-arms-sm.png" alt="" className="w-5 h-5 shrink-0" />
+              <span className="opacity-90">Federal Republic of Nigeria</span>
             </span>
             <span className="opacity-40 hidden sm:inline">|</span>
             {/* Phones: Zonal Offices is hidden here (it is in the menu), so the bar stays on one line */}
