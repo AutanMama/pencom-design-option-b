@@ -9,6 +9,7 @@ import { heroSlides, latestNews, faqs } from "@/lib/data";
 import { popularSearches } from "@/pages/Search";
 import { latestCirculars, isNew } from "@/lib/library";
 import CookieConsent from "@/components/CookieConsent";
+import ReportGovBadge from "@/components/ReportGovBadge";
 import PortalHub from "@/components/PortalHub";
 
 // DESIGN 2: "Bold and photo-led".
@@ -104,6 +105,12 @@ export default function Home() {
           Soft off-white panel on the left, one curved green line,
           and PenCom's own photo on the right. Calm: one accent colour, no dark blocks under the menu. */}
       <section className="relative overflow-hidden bg-[#EAF1E3] lg:min-h-[540px] flex flex-col lg:block" aria-roledescription="carousel" aria-label="Featured">
+        {/* ReportGov badge: top-right corner of the banner (design 1 has it top-left) */}
+        <div className="absolute top-3 inset-x-0 z-30 pointer-events-none">
+          <div className="max-w-7xl mx-auto px-4 flex justify-end">
+            <span className="pointer-events-auto"><ReportGovBadge /></span>
+          </div>
+        </div>
         {/* Computer: photo fills the right side, the white wave panel sits over its left edge */}
         <div className="hidden lg:block absolute inset-y-0 right-0 w-[64%] bg-[#F4F4F4]" aria-hidden="true">
           <AnimatePresence initial={false}>

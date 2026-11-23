@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 
-export default function ReportGovBadge() {
+export default function ReportGovBadge({ compact = false, className = "" }: { compact?: boolean; className?: string }) {
   return (
     <motion.a
       href="https://reportgov.ng"
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center bg-gradient-to-r from-[#9D2B1F] to-[#D32F2F] text-white rounded-md px-3 py-1.5 shadow-lg hover:shadow-xl transition-all"
+      className={`items-center bg-gradient-to-r from-[#9D2B1F] to-[#D32F2F] text-white rounded-md transition-all ${compact ? "px-2 py-0.5 ring-1 ring-white/40" : "px-3 py-1.5 shadow-lg hover:shadow-xl"} ${className || "inline-flex"}`}
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
       title="ReportGov.ng - Report Government Activities"

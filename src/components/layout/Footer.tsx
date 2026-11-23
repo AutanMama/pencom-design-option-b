@@ -4,7 +4,6 @@ import {
   Mail, Phone, MapPin, ExternalLink, ArrowRight, ChevronDown, CheckCircle2,
   Apple, Play, Facebook, Linkedin, Instagram, Youtube, ShieldCheck, Accessibility
 } from "lucide-react";
-import ReportGovBadge from "@/components/ReportGovBadge";
 import { portals as allPortals, PortalLeaveDialog, type Portal } from "@/components/PortalHub";
 
 // Current X logo (the old Twitter bird was retired in 2023)
@@ -176,7 +175,6 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col lg:flex-row lg:items-center justify-between gap-3 text-xs text-white/70">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <span className="flex items-center gap-1.5"><span className="w-5 h-5 rounded-full bg-white flex items-center justify-center shrink-0" aria-hidden="true"><img src="./pencom-logo-sm.png" alt="" className="h-3.5" /></span> Official website of the National Pension Commission</span>
-            <ReportGovBadge />
             <Link to="/privacy" className="flex items-center gap-1.5 hover:text-white"><ShieldCheck className="w-4 h-4 text-white" /> Data protected under the NDPA 2023</Link>
             <Link to="/accessibility" className="flex items-center gap-1.5 hover:text-white"><Accessibility className="w-4 h-4 text-white" /> Accessibility</Link>
           </div>
