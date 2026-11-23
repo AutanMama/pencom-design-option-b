@@ -45,7 +45,7 @@ export default function UpdatesTicker({ dark = false }: { dark?: boolean }) {
   const item = latestUpdates[index];
   const isAlert = /alert|deadline/i.test(item.label);
   // Design 2: a "breaking news" strip. The label is a coloured block on the left edge
-  // (red for alerts, PenCom green for news). White bar under the white menu; see-through dark over photos.
+  // (red for alerts, PenCom green for news). Light red tint under the white menu (stands apart from the green banner and draws attention); see-through dark over photos.
   const block = isAlert ? "bg-[#9D2B1F]" : "bg-[#326206]";
   // Small pulsing dot on important alerts only, to catch the eye (stops if the device asks for less motion)
   const dot = isAlert && (
@@ -58,7 +58,7 @@ export default function UpdatesTicker({ dark = false }: { dark?: boolean }) {
 
   return (
     <div
-      className={`text-sm transition-colors duration-300 ${dark ? "bg-black/45 backdrop-blur-sm text-white" : "bg-[#F4F4F4] text-black border-y border-[#E3E3E3]"}`}
+      className={`text-sm transition-colors duration-300 ${dark ? "bg-black/45 backdrop-blur-sm text-white" : "bg-[#F4D9D7] text-black border-y border-[#E9C2BE]"}`}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onTouchStart={onTouchStart}
@@ -90,7 +90,7 @@ export default function UpdatesTicker({ dark = false }: { dark?: boolean }) {
           </button>
           <button
             onClick={() => window.dispatchEvent(new Event("pencom:open-updates"))}
-            className={`hidden md:inline-flex items-center gap-1.5 ml-2 pl-3 border-l text-[11px] font-semibold uppercase tracking-[0.12em] ${dark ? "border-white/20 text-white/85 hover:text-white" : "border-gray-200 text-[#326206] hover:text-black"}`}
+            className={`hidden md:inline-flex items-center gap-1.5 ml-2 pl-3 border-l text-[11px] font-semibold uppercase tracking-[0.12em] ${dark ? "border-white/20 text-white/85 hover:text-white" : "border-[#E9C2BE] text-[#326206] hover:text-black"}`}
           >
             <Megaphone className="w-3.5 h-3.5" /> All updates
           </button>
